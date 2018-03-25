@@ -13,8 +13,8 @@ Stereo SLAM in Matlab
 ### 2、前端里程
 ![](https://github.com/zqsh/naive-slam/blob/master/asset/od.png)
 
-1. 采集的图像进行矫正，畸变图像处理
-2. 特征检测匹配
+1. 采集的图像进行矫正，畸变图像处理。一般用针孔相机模型来处理就可
+2. 特征检测匹配。 
 3. 同一时刻的二张图片根据对极几何原理估计特征点的位置
 4. t时刻的图片与t+1时刻的图片 估计相机的旋转矩阵和平移向量
 
@@ -31,3 +31,10 @@ Stereo SLAM in Matlab
 ![](https://github.com/zqsh/naive-slam/blob/master/asset/loop-closure.png)
 - 大坑！怕matlab没有好用的轮子，自己重写要挂。
 - 小尺度的可以尝试
+
+
+## 二、一些有用的资源
+
+- [半闲居士blog](http://www.cnblogs.com/gaoxiang12/)
+- [slam 14讲](https://github.com/gaoxiang12/slambook)
+- [入门资料](https://blog.csdn.net/lmg2015/article/details/52869208)
