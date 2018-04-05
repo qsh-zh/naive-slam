@@ -4,7 +4,6 @@ Stereo SLAM in Matlab
 - 目标：从双目相机采集到的数据根据稀疏法绘制特征点地图。[效果](https://www.youtube.com/watch?v=MUyNOEICrf8 "orb-slam")
 - 非实时
 
-
 ## 一、框架
 ![](https://github.com/zqsh/naive-slam/blob/master/asset/frame.png)
 ### 1、视觉数据
@@ -32,9 +31,19 @@ Stereo SLAM in Matlab
 - 大坑！怕matlab没有好用的轮子，自己重写要挂。
 - 小尺度的可以尝试
 
+## 二、分工
+![](https://github.com/zqsh/naive-slam/blob/master/asset/matlab.png)
+
+### 2017-4-4
+1. LZY 负责图像的畸变处理和图像转移关系的求解
+2. GMH 负责他图像的特征点的提取和匹，根据双目求解出特征点的深度
+3. KZL 负责根据图像来反求解出相机的位姿变化
+4. FJJ 负责SLAM的后端优化
+5. ZQS 负责喊加油和胶水作用
 
 ## 二、一些有用的资源
 
 - [半闲居士blog](http://www.cnblogs.com/gaoxiang12/)
 - [slam 14讲](https://github.com/gaoxiang12/slambook)
 - [入门资料](https://blog.csdn.net/lmg2015/article/details/52869208)
+
