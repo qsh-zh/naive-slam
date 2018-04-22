@@ -41,6 +41,8 @@ Stereo SLAM in Matlab
 4. FJJ 负责SLAM的后端优化
 5. ZQS 负责喊加油和胶水作用
 
+### 2017-4-22
+1. ZQS 增加了测试KITTI数据
 ## 二、一些有用的资源
 
 - [半闲居士blog](http://www.cnblogs.com/gaoxiang12/)
