@@ -19,10 +19,10 @@ pointsL0   = vectorFeatures(imageL0);
 tracker = vision.PointTracker('MaxBidirectionalError', 1);
 initialize(tracker,pointsL0.Location,imageL0);
 [pointsL1,valid] = step(tracker,imageL1);
-coPoints = valid(:) == 0;
+missingP = valid(:) == 0;
 posPointsL0 = pointsL0.Location;
-posPointsL0(coPoints,:) = [];
-posPointsL1 = posPointsL1(coPoints,:);
+posPointsL0(missingP,:) = [];
+posPointsL1 = posPointsL1(missingP,:);
 
 %find
 
