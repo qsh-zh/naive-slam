@@ -1,0 +1,8 @@
+function y = m(f)
+    name = strcat('20180512_1444',f,'A.jpg');
+    im = imread(name);
+    imL = im(:,1:2240,:);
+    imR = im(:,2241:end,:);
+    imwrite(imL,strcat(im,'L.jpg'))
+    imwrite(imR,strcat(imR,'R.jpg'))
+end
