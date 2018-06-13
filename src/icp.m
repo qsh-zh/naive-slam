@@ -23,9 +23,15 @@ function tranMatrix = icp(points2D1,points2D2,points3D1,points3D2,projectFun)
 % error =project(tranMatrix* points3D1) - points2D2
 % error =project(inv(tranMatrix)* points3D2) - points2D1
 % ...
+if size(points2D1,2) == 2
+    points2D1(:,3) = 1;
+    points2D2(:,3) = 1;
+    points3D2(:,4) = 1;
+    points3D1(:,4) = 1;
+end
 twist0=zeros(6,1);
 options = optimoptions('lsqcurvefit','Algorithm','levenberg-marquardt');
-twist = lsqcurvefit(@points3D1_to_2D2,twist0,points3D1,points2D2,[],[],options);
+twist = lsqcurvefit(@points3D1_to_2D2,twist0,points3D1,double(points2D2),[],[],options);
 tranMatrix=twist_to_tranMatrix(twist);
 %% below is for checking the error between my answer and the correct answer 
 % r=points2D2-projectFun((tranMatrix*points3D1')');
